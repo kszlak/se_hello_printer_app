@@ -55,7 +55,17 @@ Możemy zastąpić poniższe 2 polecenia make deps:
 
   ::
 
+- Możemy dodać monitoring strony
+  Przechodzimy do statuscake.com
     ...
+- Badge z TraviCI
+.. image:: https://travis-ci.org/kszlak/se_hello_printer_app.svg?branch=master
+    :target: https://travis-ci.org/kszlak/se_hello_printer_app
+
+- Badge z StatusCake
+
+.. image:: https://app.statuscake.com/button/index.php?Track=3999785&Days=1&Design=6
+    :target: https://www.statuscake.com
 
 
 Pomocnicze
