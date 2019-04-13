@@ -2,4 +2,3 @@ mock
 pytest
 flake8
 pytest-cov
-pytest>=4.3.1
