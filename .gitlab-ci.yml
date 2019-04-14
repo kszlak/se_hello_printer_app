@@ -18,4 +18,4 @@ docker:
 stage: docker_build
 
 script:
-  - docker build -t myapp .
+  - docker build -t myapp
