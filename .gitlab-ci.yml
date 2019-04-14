@@ -14,8 +14,6 @@ docker:
   image: docker:stable
   services:
     - docker:dind
-
-stage: docker_build
-
-script:
-  - docker build -t myapp
+    stage: docker_build
+    script:
+    - docker build -t myapp
