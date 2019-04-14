@@ -14,7 +14,7 @@ lint:
 	flake8 hello_world/
 
 docker_build:
-	docker build -t hello-world-printer .
+	docker build -t myapp .
 
 docker_run: docker_build
 	docker run \
