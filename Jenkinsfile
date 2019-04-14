@@ -3,22 +3,28 @@ pipeline {
     stages {
         stage('Deps') {
             steps {
-	            sh 'make deps'
-        	}}
-        stage('Linter') {
+                sh 'make deps'
+            }
+        }
+        stage('Test') {
             steps {
-  	           sh 'make lint'
-          }}
-          stage("test") {
-        steps {
-          sh 'make test_xunit || true'
-          xunit thresholds: [
-              skipped(failureThreshold: '0'),
-              failed(failureThreshold: '1')],
-              tools: [
-                  JUnit(deleteOutputFiles: true, failIfNotNew: true, pattern: 'test_results.xml',
-                        skipNoTestFiles: false, stopProcessingIfError: true)
-              ]
+                sh 'make test'
+            }
+        }
+        stage('Lint') {
+            steps {
+                sh 'make lint'
+            }
+        }
+    stage('Testxunit') {
+            steps {
+                sh 'make test_xunit || true'
+        step([$class: 'XUnitBuilder',
+            thresholds: [
+                [$class: 'SkippedThreshold', failureThreshold: '0'],
+                [$class: 'FailedThreshold', failureThreshold: '1']],
+            tools: [[$class: 'JUnitType', pattern: 'test_results.xml']]])
+            }
         }
     }
 }
