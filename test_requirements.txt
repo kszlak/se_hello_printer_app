@@ -2,3 +2,5 @@ mock
 pytest>=4.3.1
 flake8
 pytest-cov
+requests
+jmespath

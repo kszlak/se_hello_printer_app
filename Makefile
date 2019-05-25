@@ -7,6 +7,9 @@ deps:
 test:
 	PYTHONPATH=. py.test  --verbose -s
 
+test_api:
+	python test_api/check_api.py
+
 run:
 	python main.py
 
