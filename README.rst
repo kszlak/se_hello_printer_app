@@ -22,7 +22,7 @@ Możemy zastąpić poniższe 2 polecenia make deps:
 
   Sprawdź: `documentację virtualenvwrappera <https://virtualenvwrapper.readthedocs.io/en/latest/command_ref.html>`_.
 
-- Uruchamianie applikacji:
+- Uruchamianie applikacji :
 
   ::
 
